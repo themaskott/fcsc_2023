@@ -13,13 +13,14 @@ Il faut donc se rendre sur https://france-cybersecurity-challenge.fr/teasing
 #### Step 1
 
 <p align="center">
-  <img src="img/consignes1.png" />
+  <img src="img/consignes1.png"/>
 </p>
 
 Et en plus des consignes, on récupère une image :
 
 <p align="center">
-  <img src="img/teaser.png" />
+  <img src="img/teaser.png"
+  style="max-width:50%"/>
 </p>
 
 D'une part il semble que nous allons devoir reconstituer l'image d'origine comme un puzzle, d'autre part en regardant un peu plus près ([Aperisolve](https://www.aperisolve.com/)) on remarque que les "sous images" produites par l'extraction des LSB contiennent des carrés entièrement noirs et des carrés de neige. Il faudra donc sûrement extraire des données des LSB.
@@ -68,13 +69,15 @@ Avec [CyberChef](https://gchq.github.io/CyberChef/), en ajoutant la brique **Ext
 #### Step 2
 
 <p align="center">
-  <img src="img/recompose_extracted.png" />
+  <img src="img/recompose_extracted.png"
+  style="max-width:50%"/>
 </p>
 
 Je ne sais pas si c'est voulu ou pas par les concepteurs du challenge, mais j'ai une barre noire en bas de l'image qui créé un décalage si on là découpe comme précédemment. Du coup, je passe dans Gimp pour recadrer l'image :
 
 <p align="center">
-  <img src="img/recompose_extracted2.png" />
+  <img src="img/recompose_extracted2.png"
+  style="max-width:50%"/>
 </p>
 
 Et on recommence. Pour faciliter le puzzle, en cherchant `old white man meme` sur son moteur favoris on retrouve rapidement un modèle.
@@ -178,7 +181,7 @@ La zone mémoire utilisée est sur la stack, ce qui va être pratique pour rapid
 
 On lance le programme dans gdb et on break après le chargement des données sur la stack :
 
-```bash
+```c
 gdb-peda$ x/70gx $rsp
 0x7fffffffcd90:	0x0000000000000000	0x0000000000000000
 0x7fffffffcda0:	0x0000000000000000	0x0000000000000004
