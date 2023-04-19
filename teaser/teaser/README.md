@@ -83,7 +83,7 @@ Et on recommence. Pour faciliter le puzzle, en cherchant `old white man meme` su
 
 Cette fois l'extraction nous procure un binaire
 
-[teaser](files/teaser)
+[teaser](files/extracted.elf)
 
 On peut faire quelques tests dessus, mais finalement ce ne sera pas un challenge de pwn :)
 
