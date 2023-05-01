@@ -4,7 +4,7 @@
   <img src="img/consignes.png" />
 </p>
 
-Le binaire et le code source du challenge nous sont fourni :
+Le binaire et le code source du challenge nous sont fournis :
 - [robot](files/robot)
 - [robot.c](files/robot.c)
 
