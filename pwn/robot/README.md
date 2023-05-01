@@ -37,7 +37,7 @@ void admin(char *pwd){
         puts("ERROR: wrong password!");
     }
 }
-``̀
+```
 
 Bien sur nous ne connaissons pas le mot de passe, mais nous pourrons essayer de sauter directement dans le code à l'addresse du `execl("/bin/cat", "/bin/cat", "flag.txt", NULL);`
 
