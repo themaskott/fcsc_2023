@@ -39,7 +39,7 @@ void admin(char *pwd){
 }
 ```
 
-Bien sur nous ne connaissons pas le mot de passe, mais nous pourrons essayer de sauter directement dans le code à l'addresse du `execl("/bin/cat", "/bin/cat", "flag.txt", NULL);`
+Bien sûr nous ne connaissons pas le mot de passe, mais nous pourrons essayer de sauter directement dans le code à l'addresse du `execl("/bin/cat", "/bin/cat", "flag.txt", NULL);`
 
 Les deux structures dont nous allons pouvoir demander les créations avec l'allocation de mémoire :
 ```c

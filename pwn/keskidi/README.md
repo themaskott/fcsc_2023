@@ -76,7 +76,7 @@ A chaque écriture la tête de lecture va pointer sur l'octer suivant celui écr
 
 Dans le shellcode, je reviens d'un octet en arrière pour lire le NULL byte et quelques octets random.
 
-Ces quelques octets permettent de rechercher cette même séquence dans le random originial, puis comparer l'octet précédent, s'il est non nul dans le random original il est récupérer comme caractère du flag.
+Ces quelques octets permettent de rechercher cette même séquence dans le random originial, puis comparer l'octet précédent, s'il est non nul dans le random original il est récupéré comme caractère du flag.
 
 
 Ce shellcode fonctionnait en local, mais difficilement en remote.
@@ -106,13 +106,13 @@ FCSC{5cdafc51{7172d31cd8e2129C704d62e72939ab59dS1Sf4e8}3}e1}d
 FCS{5cda7cf5afba2141cFa1bdbaCc237e43d4Ff36305CedaC35bc8c{4SFeCef8dC}C}c}S1CS193
 ```
 
-En simplifiant le shellcode (`push pop` remplacés par des `mov` directs, `xor` pour mettre à zéro), le rendu était un peu meilleurs.
+En simplifiant le shellcode (`push pop` remplacés par des `mov` directs, `xor` pour mettre à zéro), le rendu était un peu meilleur.
 
 Je me suis dit que la race condition avec le processus père s'améliorait.
 
 #### Second shellcode
 
-Pour continuer j'ai ajouté un appel système a `sys_nanosleep` dans la boucle du shellcode, et j'ai joué avec la valeur du sleep pour essayer de caler ma boucle sur les opération d'écritures du processus père.
+Pour continuer j'ai ajouté un appel système a `sys_nanosleep` dans la boucle du shellcode, et j'ai joué avec la valeur du sleep pour essayer de caler ma boucle sur les opérations d'écritures du processus père.
 
 Code complet [exploit3.py](files/exploit3.py)
 
