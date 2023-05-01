@@ -114,6 +114,9 @@ Je me suis dit que la race condition avec le processus père s'améliorait.
 
 Pour continuer j'ai ajouté un appel système a `sys_nanosleep` dans la boucle du shellcode, et j'ai joué avec la valeur du sleep pour essayer de caler ma boucle sur les opération d'écritures du processus père.
 
+Code complet [exploit3.py](files/exploit3.py)
+
+
 ```python
 shellcode="""
 
